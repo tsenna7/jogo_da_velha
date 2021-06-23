@@ -27,12 +27,10 @@ public class JogoDaVelha{
     private void jogar(Scanner teclado){
         jogoMapa.limpar();
         jogoMapa.desenhar(0);
-        jogoPC.jogar();
         int jogada = 0;
         
         int quemJoga = 0;
-        jogoMapa.limpar();
-        quemJoga = jogoMapa.sortear(0, 1);
+        quemJoga = jogoMapa.sortear(0, 2);
         
         while(!jogoMapa.verificarGanhador('X') && !jogoMapa.verificarGanhador('O')){
             switch(quemJoga){
@@ -54,7 +52,6 @@ public class JogoDaVelha{
     }
     
     public static void main(String[] args) throws Exception{
-
         new JogoDaVelha();
     }
 }
