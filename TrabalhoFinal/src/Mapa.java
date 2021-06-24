@@ -27,6 +27,10 @@ public class Mapa{
             System.out.println("|");
             System.out.println("-------------");
         }
+
+        if(jogada == 9 && !verificarGanhador('X') && !verificarGanhador('O')){
+            System.out.println("... EMPATOU!");
+        }
     }
     
     public boolean jogar(int l, int c, char jogador){
@@ -43,10 +47,6 @@ public class Mapa{
         mapa[0][0] == jogador && mapa[1][1] == jogador && mapa[2][2] == jogador || mapa[0][1] == jogador && mapa[1][1] == jogador && mapa[2][1] == jogador || 
         mapa[0][2] == jogador && mapa[1][2] == jogador && mapa[2][2] == jogador || mapa[1][0] == jogador && mapa[1][1] == jogador && mapa[1][2] == jogador ||
         mapa[2][0] == jogador && mapa[2][1] == jogador && mapa[2][2] == jogador || mapa[0][2] == jogador && mapa[1][1] == jogador && mapa[2][0] == jogador){
-            return true;
-        }else if(mapa[0][0] != ' ' && mapa[0][1] != ' ' && mapa[0][2] != ' ' && mapa[1][0] != ' ' && mapa[1][1] != ' ' && mapa[1][2] != ' ' &&
-        mapa[2][0] != ' ' && mapa[2][1] != ' ' && mapa[2][2] != ' '){
-            System.out.println("... EMPATOU!");
             return true;
         }
         return false;

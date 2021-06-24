@@ -21,7 +21,7 @@ public class PC{
                 repetir = false;
             }
         }
-        if(mapa.verificarGanhador(letra)){
+        if(mapa.verificarGanhador('O')){
             System.out.println("... PC GANHOU!");
             return false;
         }

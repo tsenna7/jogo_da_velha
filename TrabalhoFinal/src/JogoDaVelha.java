@@ -32,7 +32,7 @@ public class JogoDaVelha{
         int quemJoga = 0;
         quemJoga = jogoMapa.sortear(0, 2);
         
-        while(!jogoMapa.verificarGanhador('X') && !jogoMapa.verificarGanhador('O')){
+        while(!jogoMapa.verificarGanhador('X') && !jogoMapa.verificarGanhador('O') && jogada < 9){
             switch(quemJoga){
                 case 0:
                     jogoJogador.jogar(teclado);
