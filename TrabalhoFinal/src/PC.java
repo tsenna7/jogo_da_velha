@@ -20,6 +20,8 @@ public class PC{
 
                 repetir = false;
             }
+
+            System.out.println("PC[" + linha + ","+ coluna+ "]");
         }
         if(mapa.verificarGanhador('O')){
             System.out.println("... PC GANHOU!");
