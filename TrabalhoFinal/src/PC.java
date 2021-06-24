@@ -18,11 +18,11 @@ public class PC{
             
             if(mapa.jogar(linha, coluna, letra)){
                 repetir = false;
-                System.out.println("PC[" + linha + ","+ coluna+ "]");
             }
 
            
         }
+        System.out.println("PC[" + linha + ","+ coluna+ "]");
         if(mapa.verificarGanhador('O')){
             System.out.println("... PC GANHOU!");
             return false;
